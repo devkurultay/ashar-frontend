@@ -1,15 +1,18 @@
 import React from 'react'
 import OtherLangExample from './other-lang-example'
 
+import '../style.css'
+import CardContent from '../../../component/card/card-content'
+
 const RequestItem = (props) => {
   return (
-    <div className="request-item">
+    <CardContent noBackground noPadding className="request-item">
       <p>{props.term}</p>
-      <div className="request-item__langs-wrapper">
-        <p>{props.description}</p>
+      <CardContent className="request-item__langs-wrapper">
         {props.other_lang_examples.map((t, i) => <OtherLangExample key={i} {...t}/>)}
-      </div>
-    </div>
+      </CardContent>
+      <img src="/bookmark.svg" alt="bookmark"/>
+    </CardContent>
   )
 }
 
