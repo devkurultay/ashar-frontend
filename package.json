@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "connected-react-router": "^6.9.1",
@@ -21,6 +18,12 @@
     "redux-wait-for-action": "^0.0.8",
     "web-vitals": "^1.1.0",
     "yup": "^0.32.9"
+  },
+  "devDependencies" : {
+    "node-sass": "^5.0.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10"
   },
   "scripts": {
     "start": "react-scripts start",

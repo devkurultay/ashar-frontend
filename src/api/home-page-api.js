@@ -1,12 +1,12 @@
-import axios from 'axios'
+import instance from './axios-api'
 
 export const homePageApi = {
   getHomePage: async () => {
-    const data = await axios.get('https://example.com/home')
+    const data = await instance.get('/home')
     return data.data
   },
 
   postHomePage: async (data) => {
-   await axios.post('https://example.com/home', data)
+   await instance.post('/home', data)
   }
 }
