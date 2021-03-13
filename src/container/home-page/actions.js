@@ -1,7 +1,7 @@
-export const TERMS_REQUEST = '[HOME] TERMS REQUEST'
-export const TERMS_SUCCESS = '[HOME] TERMS SUCCESS'
-export const TERMS_ERROR = '[HOME] TERMS ERROR'
+export const REQUESTS_REQUEST = '[HOME] REQUESTS REQUEST'
+export const REQUESTS_SUCCESS = '[HOME] REQUESTS SUCCESS'
+export const REQUESTS_ERROR = '[HOME] REQUESTS ERROR'
 
-export const termsRequest = () => ({ type: TERMS_REQUEST })
-export const termsSuccess = ({ data }) => ({ type: TERMS_SUCCESS, data })
-export const termsError = (error) => ({ type: TERMS_ERROR, error })
+export const requestsRequest = () => ({ type: REQUESTS_REQUEST })
+export const requestsSuccess = ({ data }) => ({ type: REQUESTS_SUCCESS, data })
+export const requestsError = (error) => ({ type: REQUESTS_ERROR, error })

@@ -1,16 +1,16 @@
 import React from 'react'
 import OtherLangExample from './other-lang-example'
 
-const TermsItem = (props) => {
+const RequestItem = (props) => {
   return (
-    <div className="terms-item">
+    <div className="request-item">
       <p>{props.term}</p>
-      <p>{props.description}</p>
-      <div className="terms-item__langs-wrapper">
+      <div className="request-item__langs-wrapper">
+        <p>{props.description}</p>
         {props.other_lang_examples.map((t, i) => <OtherLangExample key={i} {...t}/>)}
       </div>
     </div>
   )
 }
 
-export default TermsItem
+export default RequestItem

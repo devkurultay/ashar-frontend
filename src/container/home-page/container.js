@@ -6,7 +6,7 @@ import * as homeActions from './actions'
 class HomePageContainer extends Component {
 
   componentDidMount() {
-    this.props.termsRequest()
+    this.props.requestsRequest()
   }
 
   render() {
@@ -19,7 +19,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  termsRequest: () => dispatch(homeActions.termsRequest()),
+    requestsRequest: () => dispatch(homeActions.requestsRequest()),
 })
 
 const Home = connect(

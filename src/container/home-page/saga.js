@@ -1,7 +1,7 @@
 import { call, put, takeEvery } from 'redux-saga/effects'
 import * as actions from './actions'
 
-const json = () => [
+const fixture = () => [
   {
     "term": "CPU",
     "description": "Бул компьтердин негизги эсептөөчү бирдигинин аталышы.",
@@ -26,17 +26,17 @@ const json = () => [
   },
 ]
 
-export function* termsRequestWorker() {
+export function* requestsRequestWorker() {
   try {
-    let result = yield call(json)
-    yield put(actions.termsSuccess({
+    let result = yield call(fixture)
+    yield put(actions.requestsSuccess({
       data: result
     }))
   } catch (error) {
-    yield put(actions.termsError())
+    yield put(actions.requestsError())
   }
 }
 
-export function* termsRequestWatcher() {
-  yield takeEvery(actions.TERMS_REQUEST, termsRequestWorker)
+export function* requestsRequestWatcher() {
+  yield takeEvery(actions.REQUESTS_REQUEST, requestsRequestWorker)
 }
