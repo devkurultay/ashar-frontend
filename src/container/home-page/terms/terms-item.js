@@ -5,13 +5,10 @@ const TermsItem = (props) => {
   return (
     <div className="terms-item">
       <p>{props.term}</p>
+      <p>{props.description}</p>
       <div className="terms-item__langs-wrapper">
-        {props.translations_in_other_langs.map((t, i) => {
-          const keys = Object.keys(t)
-          const els = keys.map(k => {
-            return <span>{k}: {t[k]}</span>
-          })
-          return <span>{els}</span>
+        {props.other_lang_examples.map((t, i) => {
+            return <span key={i}>{t.lang}: {t.value}</span>
         })}
       </div>
     </div>
