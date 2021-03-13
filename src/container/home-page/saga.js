@@ -40,3 +40,29 @@ function* requestsRequestWorker() {
 export function* requestsRequestWatcher() {
   yield takeEvery(actions.REQUESTS_REQUEST, requestsRequestWorker)
 }
+
+function* addTermRequestWorker({ term, description, ru, tr, en }) {
+  const data = {
+    term: term,
+    description: description,
+    other_lang_examples: [
+      {lang: "ru", value: ru},
+      {lang: "tr", value: tr},
+      {lang: "en", value: en}
+    ]
+  }
+  // TODO: remove this
+  const somePostRequest = d => d
+  try {
+    let result = yield call(somePostRequest, data)
+    yield put(actions.addTermSuccess({
+      data: result
+    }))
+  } catch (error) {
+    yield put(actions.addTermError(error))
+  }
+}
+
+export function* addTermRequestWatcher() {
+  yield takeEvery(actions.ADD_TERM_REQUEST, addTermRequestWorker)
+}
