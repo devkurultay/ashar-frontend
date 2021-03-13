@@ -3,6 +3,7 @@ import * as actions from './actions'
 
 const fixture = () => [
   {
+    "id": 1,
     "term": "CPU",
     "description": "Бул компьтердин негизги эсептөөчү бирдигинин аталышы.",
     "other_lang_examples": [
@@ -14,6 +15,7 @@ const fixture = () => [
       {"author": "elza", "translation": "борбордук эсептөөчү бирдик"}]
   },
   {
+    "id": 2,
     "term": "RAM",
     "description": "Бул компьтердин CPU'су менен тыгыз иштешкен эс тутум бөлүгү.",
     "other_lang_examples": [
@@ -21,8 +23,8 @@ const fixture = () => [
         {"lang": "tr", "value": "Veri deposu"},
         {"lang": "kk", "value": "Жедел Жадтау Құрылғысы"}],
     "translation_suggestions": [
-      {"author": "murat", "translation": "оперативдик эстутум түзмөгү"},
-      {"author": "elza", "translation": "ыкчам эстутум түзмөгү"}]
+      {"id": 1, "author": "murat", "translation": "оперативдик эстутум түзмөгү"},
+      {"id": 2, "author": "elza", "translation": "ыкчам эстутум түзмөгү"}]
   },
 ]
 
