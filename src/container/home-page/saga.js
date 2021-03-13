@@ -11,8 +11,8 @@ const fixture = () => [
         {"lang": "tr", "value": "İşlemci"},
         {"lang": "kk", "value": "Орталық Есептеуіш Бөлім"}],
     "translation_suggestions": [
-      {"author": "murat", "translation": "борбордук эсептөөчү бөлүк"},
-      {"author": "elza", "translation": "борбордук эсептөөчү бирдик"}]
+      {"id": 1, "author": "murat", "translation": "борбордук эсептөөчү бөлүк"},
+      {"id": 2, "author": "elza", "translation": "борбордук эсептөөчү бирдик"}]
   },
   {
     "id": 2,
@@ -25,6 +25,23 @@ const fixture = () => [
     "translation_suggestions": [
       {"id": 1, "author": "murat", "translation": "оперативдик эстутум түзмөгү"},
       {"id": 2, "author": "elza", "translation": "ыкчам эстутум түзмөгү"}]
+  },
+  {
+    "id": 3,
+    "term": "Lorem",
+    "description": "Some data .",
+    "other_lang_examples": [
+        {"lang": "ru", "value": "ЦПУ"},
+        {"lang": "tr", "value": "İşlemci"}],
+    "translation_suggestions": []
+  },
+  {
+    "id": 4,
+    "term": "Ipsum",
+    "description": "Some other descr.",
+    "other_lang_examples": [
+        {"lang": "ru", "value": "ОЗУ"}],
+    "translation_suggestions": []
   },
 ]
 
