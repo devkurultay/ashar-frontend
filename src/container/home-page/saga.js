@@ -26,7 +26,7 @@ const fixture = () => [
   },
 ]
 
-export function* requestsRequestWorker() {
+function* requestsRequestWorker() {
   try {
     let result = yield call(fixture)
     yield put(actions.requestsSuccess({
