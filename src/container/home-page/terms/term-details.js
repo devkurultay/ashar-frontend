@@ -16,12 +16,12 @@ const TermDetails = () => {
         (t, i) => <OtherLangExample key={i} {...t}/>
       )}
       <p>{description}</p>
-      {translation_suggestions?.length && <>
+      {translation_suggestions?.length ? <>
         <p>Сунушталган котормолор</p>
         {translation_suggestions.map(
           (s, i) => <TranslationSuggestion key={i} {...s} />
         )}
-      </>}
+      </> : null}
     </div>
   )
 }
