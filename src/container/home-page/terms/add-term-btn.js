@@ -5,7 +5,7 @@ const AddTermBtn = (props) => {
   const history = useHistory()
   const clickHandler = () => history.push("/add-term")
   return (
-    <button onClick={clickHandler}>Жаңы</button>
+    <button onClick={clickHandler}>Которуу өтүнүчүн кош</button>
   )
 }
 
