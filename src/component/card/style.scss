@@ -1,0 +1,122 @@
+@import "../../styles/style-utilities";
+
+.card {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &.card-tablet {
+    @media (max-width: $break-medium-v2) {
+      padding: 0;
+    }
+  }
+
+  &.card-mobile {
+    @media (max-width: $break-small-v2) {
+      padding: 0 15px;
+    }
+  }
+
+  &.last-block {
+    padding-bottom: 15px;
+  }
+
+  &.first-block {
+    padding-top: 15px;
+  }
+
+  &.single-block {
+    padding: 15px 0;
+  }
+
+  &.padding {
+    padding-left: 25px;
+    padding-right: 25px;
+
+    @media (max-width: $break-small-v2) {
+      padding: 0;
+    }
+  }
+
+  &.no-padding {
+    padding: 0;
+  }
+}
+
+.card-content {
+  justify-content: space-between;
+  border-radius: 8px;
+  background-color: $white-color;
+  padding: 20px;
+  width: 100%;
+  max-width: 1123px;
+  //overflow: hidden; //Do not set this property because could not use absolute positioned blocks with it
+  @media (max-width: $break-large) and (min-width: $break-large) {
+    max-width: 960px;
+  }
+  @media (max-width: $break-medium-v2) {
+    padding: 0 24px;
+  }
+  @media (max-width: $break-small-v2) {
+    padding: 0 15px;
+  }
+  &.half-width {
+    width: 50%;
+  }
+  &.no-background {
+    background-color: transparent;
+  }
+  &.no-padding {
+    padding: 0;
+  }
+
+  &.no-padding-on-desktop {
+    @media (min-width: $break-large) {
+      padding: 0;
+    }
+  }
+  &.padding-on-tablet {
+    padding: 0;
+    @media (max-width: $break-medium-v2) {
+      padding: 0 24px;
+    }
+  }
+  &.horizontal-padding-on-tablet {
+    padding: 0;
+    @media (max-width: $break-medium-v2) {
+      padding: 0 20px;
+    }
+  }
+  &.left-padding {
+    padding: 0 0 0 20px;
+  }
+
+  &.full-on-large {
+    @media (min-width: $break-large) {
+      max-width: initial;
+      border-radius: 0;
+    }
+  }
+  &.full-on-tablet {
+    @media (max-width: $break-medium-v2) {
+      max-width: initial;
+      border-radius: 0;
+    }
+  }
+  &.full-on-mobile {
+    @media (max-width: $break-small-v2) {
+      max-width: initial;
+      border-radius: 0;
+      padding: 0;
+    }
+  }
+
+  &.clickable, &.with-shadow {
+    box-shadow: 0 1px 3px 1px rgba(160, 161, 188, 0.21)
+  }
+  &.full-width {
+    max-width: initial;
+  }
+}

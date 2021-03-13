@@ -1,0 +1,81 @@
+.card {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  @media (max-width: 1023px) {
+    .card.card-tablet {
+      padding: 0; } }
+  @media (max-width: 767px) {
+    .card.card-mobile {
+      padding: 0 15px; } }
+  .card.last-block {
+    padding-bottom: 15px; }
+  .card.first-block {
+    padding-top: 15px; }
+  .card.single-block {
+    padding: 15px 0; }
+  .card.padding {
+    padding-left: 25px;
+    padding-right: 25px; }
+    @media (max-width: 767px) {
+      .card.padding {
+        padding: 0; } }
+  .card.no-padding {
+    padding: 0; }
+
+.card-content {
+  justify-content: space-between;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 20px;
+  width: 100%;
+  max-width: 1123px; }
+  @media (max-width: 1280px) and (min-width: 1280px) {
+    .card-content {
+      max-width: 960px; } }
+  @media (max-width: 1023px) {
+    .card-content {
+      padding: 0 24px; } }
+  @media (max-width: 767px) {
+    .card-content {
+      padding: 0 15px; } }
+  .card-content.half-width {
+    width: 50%; }
+  .card-content.no-background {
+    background-color: transparent; }
+  .card-content.no-padding {
+    padding: 0; }
+  @media (min-width: 1280px) {
+    .card-content.no-padding-on-desktop {
+      padding: 0; } }
+  .card-content.padding-on-tablet {
+    padding: 0; }
+    @media (max-width: 1023px) {
+      .card-content.padding-on-tablet {
+        padding: 0 24px; } }
+  .card-content.horizontal-padding-on-tablet {
+    padding: 0; }
+    @media (max-width: 1023px) {
+      .card-content.horizontal-padding-on-tablet {
+        padding: 0 20px; } }
+  .card-content.left-padding {
+    padding: 0 0 0 20px; }
+  @media (min-width: 1280px) {
+    .card-content.full-on-large {
+      max-width: initial;
+      border-radius: 0; } }
+  @media (max-width: 1023px) {
+    .card-content.full-on-tablet {
+      max-width: initial;
+      border-radius: 0; } }
+  @media (max-width: 767px) {
+    .card-content.full-on-mobile {
+      max-width: initial;
+      border-radius: 0;
+      padding: 0; } }
+  .card-content.clickable, .card-content.with-shadow {
+    box-shadow: 0 1px 3px 1px rgba(160, 161, 188, 0.21); }
+  .card-content.full-width {
+    max-width: initial; }
