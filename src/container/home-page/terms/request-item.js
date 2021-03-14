@@ -13,7 +13,7 @@ const RequestItem = (props) => {
       <div className="request-item__content" onClick={() => history.push('/term/'+props.id)}>
         <p>{props.term}</p>
         <CardContent className="request-item__langs-wrapper">
-          {props.other_lang_examples.map((t, i) => <OtherLangExample key={i} {...t}/>)}
+          {props.other_language_examples.map((t, i) => <OtherLangExample key={i} {...t}/>)}
         </CardContent>
       </div>
       <img src="/bookmark.svg" alt="bookmark"/>
