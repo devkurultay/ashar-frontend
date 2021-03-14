@@ -38,7 +38,7 @@ const TranslationSuggestionDetails = () => {
       </>
     )
   }
-  return <div>Error</div>
+  return <div>Loading...</div>
 }
 
 export default TranslationSuggestionDetails

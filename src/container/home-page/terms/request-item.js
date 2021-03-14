@@ -8,12 +8,13 @@ import '../style.css'
 const RequestItem = (props) => {
   console.log(props)
   const history = useHistory()
+  const examples = props?.other_language_examples || []
   return (
     <CardContent noBackground noPadding className="request-item">
       <div className="request-item__content" onClick={() => history.push('/term/'+props.id)}>
         <p>{props.term}</p>
         <CardContent className="request-item__langs-wrapper">
-          {props.other_lang_examples.map((t, i) => <OtherLangExample key={i} {...t}/>)}
+          {examples.map((t, i) => <OtherLangExample key={i} {...t}/>)}
         </CardContent>
       </div>
       <img src="/bookmark.svg" alt="bookmark"/>

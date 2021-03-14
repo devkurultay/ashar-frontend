@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://example.com'
+  baseURL: 'http://ashar-backend.ga/api/v1/'
 });
 
 

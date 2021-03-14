@@ -1,6 +1,7 @@
 import { all, fork } from 'redux-saga/effects'
 import {
   addTermRequestWatcher,
+  addSuggestionRequestWatcher,
   getSuggestionRequestWatcher,
   getTermRequestWatcher,
   requestsRequestWatcher,
@@ -10,6 +11,7 @@ export default function* rootSaga() {
   yield all([
     fork(requestsRequestWatcher),
     fork(addTermRequestWatcher),
+    fork(addSuggestionRequestWatcher),
     fork(getSuggestionRequestWatcher),
     fork(getTermRequestWatcher)
   ])

@@ -11,10 +11,7 @@ const RequestsList = (props) => {
     <CardContent className="request-list">
       <h3 className="request-list__title">Котормосу жоктор</h3>
       {requests.map((term, i) =>
-        <RequestItem
-          {...term}
-          key={i}
-        />
+        <RequestItem {...term} key={i} />
       )}
       <AddTermBtn/>
     </CardContent>

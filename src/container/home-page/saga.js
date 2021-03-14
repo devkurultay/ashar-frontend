@@ -1,4 +1,5 @@
 import { call, put, takeEvery } from 'redux-saga/effects'
+import { homePageApi } from '../../api/home-page-api'
 import * as actions from './actions'
 
 const fixture = () => [
@@ -47,7 +48,7 @@ const fixture = () => [
 
 function* requestsRequestWorker() {
   try {
-    let result = yield call(fixture)
+    let result = yield call(homePageApi.terms)
     yield put(actions.requestsSuccess({
       data: result
     }))
@@ -64,16 +65,15 @@ function* addTermRequestWorker({ term, description, ru, tr, en }) {
   const data = {
     term: term,
     description: description,
+    category: 'midicin',
     other_lang_examples: [
-      {lang: "ru", value: ru},
-      {lang: "tr", value: tr},
-      {lang: "en", value: en}
+      {language: "ru", translation: ru},
+      {language: "tr", translation: tr},
+      {language: "en", translation: en}
     ]
   }
-  // TODO: remove this
-  const somePostRequest = d => d
   try {
-    let result = yield call(somePostRequest, data)
+    let result = yield call(homePageApi.addNewTerm, data)
     yield put(actions.addTermSuccess({
       data: result
     }))
@@ -86,18 +86,28 @@ export function* addTermRequestWatcher() {
   yield takeEvery(actions.ADD_TERM_REQUEST, addTermRequestWorker)
 }
 
-function* getTermRequestWorker({ id }) {
-  const someGetRequest = (id) => ({
-    id: Number(id),
-    term: "CPU",
-    description: "Бул компьтердин негизги эсептөөчү бирдигинин аталышы.",
-    other_lang_examples: [
-        {"lang": "ru", "value": "ЦПУ"},
-        {"lang": "tr", "value": "İşlemci"},
-        {"lang": "kk", "value": "Орталық Есептеуіш Бөлім"}]
-  })
+function* addSuggestionRequestWorker({ suggested_translation, term_id }) {
+  const data = {
+    suggested_translation,
+    term_id
+  }
   try {
-    let result = yield call(someGetRequest, id)
+    let result = yield call(homePageApi.addNewSuggestion, data)
+    yield put(actions.addSuggestionSuccess({
+      data: result
+    }))
+  } catch (error) {
+    yield put(actions.addSuggestionError(error))
+  }
+}
+
+export function* addSuggestionRequestWatcher() {
+  yield takeEvery(actions.ADD_SUGGESTION_REQUEST, addSuggestionRequestWorker)
+}
+
+function* getTermRequestWorker({ id }) {
+  try {
+    let result = yield call(homePageApi.getTerm, id)
     yield put(actions.getTermSuccess({
       data: result
     }))

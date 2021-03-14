@@ -9,7 +9,7 @@ const TranslationSuggestion = (props) => {
   return (
     <CardContent className="terms-translation-suggestion" onClick={() => history.push('/suggestion/'+props.id)}>
       <div className="terms-translation-suggestion__content">
-        <span className="terms-translation-suggestion__content__translation">{props.translation}</span>
+        <span className="terms-translation-suggestion__content__translation">{props.suggested_translation}</span>
         <span className="terms-translation-suggestion__content__author"><span>Автор: </span>{props.author}</span>
       </div>
       <div className="terms-translation-suggestion__icons">

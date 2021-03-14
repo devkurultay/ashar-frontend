@@ -15,14 +15,13 @@ import '../style.css'
 
 const formValidation = Yup.object().shape(
   {
-    term: Yup.string,
-    description: Yup,
+    term: Yup.string(),
+    description: Yup.string(),
     ru: Yup.string(),
     tr: Yup.string(),
     en: Yup.string()
   }
 )
-
 
 const AddTerm = () => {
   const dispatch = useDispatch()
@@ -51,15 +50,6 @@ const AddTerm = () => {
           onSubmit={(values) => dispatch(addTermRequest(values))}
           enableReinitialize={true}
           validationSchema={formValidation}
-          // onSubmit={(values, { setErrors }) => {
-          //   props.createRevenue({
-          //     term: values.term,
-          //     description: values.description,
-          //     ru: values.ru,
-          //     tr: values.tr,
-          //     en: values.en,
-          //     setErrors })
-          // }}
         >
           <Form className="add-term__form">
             <div className="add-term__form__textarea">
