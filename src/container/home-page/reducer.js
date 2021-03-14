@@ -7,6 +7,7 @@ const initialState = {
   status: DATA_STATUS.NOT_TOUCHED,
   addTermStatus: DATA_STATUS.NOT_TOUCHED,
   getSuggestionStatus: DATA_STATUS.NOT_TOUCHED,
+  getTermStatus: DATA_STATUS.NOT_TOUCHED,
   error: ''
 }
 
@@ -55,6 +56,23 @@ const homeReducer = (state = initialState, action) => {
       return {
         ...state,
         getSuggestionStatus: DATA_STATUS.ERROR,
+        error: action.error
+      }
+    case homeActions.GET_TERM_REQUEST:
+      return {
+        ...state,
+        getTermStatus: DATA_STATUS.REQUESTED
+      }
+    case homeActions.GET_TERM_SUCCESS:
+      return {
+        ...state,
+        requests: [...state.requests, action.data ],
+        getTermStatus: DATA_STATUS.SUCCESS
+      }
+    case homeActions.GET_TERM_ERROR:
+      return {
+        ...state,
+        getTermStatus: DATA_STATUS.ERROR,
         error: action.error
       }
     default:
