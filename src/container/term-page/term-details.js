@@ -5,6 +5,7 @@ import Card from '../../component/card/card'
 import CardContent from '../../component/card/card-content'
 
 import './style.css'
+import AddSuggestionBtn from './add-suggestion-btn'
 
 const TermDetails = (props) => {
   const requests = props.requests || []
@@ -25,6 +26,7 @@ const TermDetails = (props) => {
               (s, i) => <TranslationSuggestion key={i} {...s} />
             )}
           </> : null}
+          <AddSuggestionBtn termId={props.id} />
         </CardContent>
       </Card>
     )
