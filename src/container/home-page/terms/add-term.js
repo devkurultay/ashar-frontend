@@ -50,15 +50,6 @@ const AddTerm = () => {
           onSubmit={(values) => dispatch(addTermRequest(values))}
           enableReinitialize={true}
           validationSchema={formValidation}
-          // onSubmit={(values, { setErrors }) => {
-          //   props.createRevenue({
-          //     term: values.term,
-          //     description: values.description,
-          //     ru: values.ru,
-          //     tr: values.tr,
-          //     en: values.en,
-          //     setErrors })
-          // }}
         >
           <Form className="add-term__form">
             <div className="add-term__form__textarea">
