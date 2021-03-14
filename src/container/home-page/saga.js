@@ -65,7 +65,7 @@ function* addTermRequestWorker({ term, description, ru, tr, en }) {
   const data = {
     term: term,
     description: description,
-    category: 'aviaica',
+    category: 'midicin',
     other_lang_examples: [
       {language: "ru", translation: ru},
       {language: "tr", translation: tr},
