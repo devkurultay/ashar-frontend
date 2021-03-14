@@ -24,15 +24,15 @@ const AddSuggestion = () => {
   const dispatch = useDispatch()
   const history = useHistory()
   const { term_id } = useParams()
-  const { getSuggestionStatus, requests } = useSelector(state => state.home)
-  const prevGetSuggestionStatus = usePrevious(getSuggestionStatus)
+  const { addSuggestionStatus, requests } = useSelector(state => state.home)
+  const prevAddSuggestionStatus = usePrevious(addSuggestionStatus)
 
   useEffect(() => {
     dispatch(getTermRequest(term_id))
-    if (isRequestedStatus(prevGetSuggestionStatus) && isSuccessStatus(getSuggestionStatus)) {
+    if (isRequestedStatus(prevAddSuggestionStatus) && isSuccessStatus(addSuggestionStatus)) {
       history.push('/term/' + term_id)
     }
-  }, [prevGetSuggestionStatus, getSuggestionStatus, history, term_id])
+  }, [prevAddSuggestionStatus, addSuggestionStatus, history, term_id])
 
   const termObj = requests.length ? requests.filter(r => r.id === Number(term_id))?.[0] : {}
   const title = termObj?.term?.length ? `"${termObj.term}" боюнча жаңы котормо` : 'Жаңы котормо'
