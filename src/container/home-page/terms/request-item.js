@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from "react-router-dom"
-import OtherLangExample from './other-lang-example'
+import OtherLangExample from '../../common/other-lang-example'
 
 import '../style.css'
 import CardContent from '../../../component/card/card-content'
