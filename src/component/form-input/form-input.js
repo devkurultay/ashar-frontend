@@ -1,7 +1,7 @@
 import React from 'react'
 import FormInputGeneral from './form-input-general'
 
-import './style.css'
+import './style.scss'
 
 const FormInput = ({ field, form, ...props }) => {
   return (

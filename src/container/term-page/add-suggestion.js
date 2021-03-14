@@ -11,7 +11,7 @@ import FormInput from '../../component/form-input/form-input'
 import Button from '../../component/button/button'
 import * as Yup from 'yup'
 
-import '../home-page/style.css'
+import '../home-page/style.scss'
 
 const formValidation = Yup.object().shape(
   {

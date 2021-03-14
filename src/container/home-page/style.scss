@@ -29,13 +29,13 @@
   margin-top: 24px;
   &__content {
     display: grid;
-    grid-template-columns: 85px 1fr;
+    grid-template-columns: 170px 1fr;
     grid-column-gap: 18px;
     align-items: center;
     justify-items: center;
     width: 100%;
     p {
-      font-size: 18px;
+      font-size: 14px;
       line-height: 21px;
       color: #000000;
       text-transform: uppercase;

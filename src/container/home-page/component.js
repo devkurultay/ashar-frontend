@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Card from '../../component/card/card'
 import RequestsList from './terms/requests-list'
 
-import './style.css'
+import './style.scss'
 
 class HomePageComponent extends Component {
   render() {

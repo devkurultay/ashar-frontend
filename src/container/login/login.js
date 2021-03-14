@@ -6,7 +6,7 @@ import * as Yup from 'yup'
 import CardContent from '../../component/card/card-content'
 import Card from '../../component/card/card'
 
-import './style.css'
+import './style.scss'
 
 const formValidation = Yup.object().shape(
   {

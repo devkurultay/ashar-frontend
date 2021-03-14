@@ -3,7 +3,7 @@ import RequestItem from './request-item'
 import CardContent from '../../../component/card/card-content'
 import AddTermBtn from './add-term-btn'
 
-import '../style.css'
+import '../style.scss'
 
 const RequestsList = (props) => {
   const requests = props.requests || []
