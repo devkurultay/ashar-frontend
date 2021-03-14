@@ -85,3 +85,26 @@ function* addTermRequestWorker({ term, description, ru, tr, en }) {
 export function* addTermRequestWatcher() {
   yield takeEvery(actions.ADD_TERM_REQUEST, addTermRequestWorker)
 }
+
+function* getSuggestionRequestWorker({ id }) {
+  const someGetRequest = (id) => ({
+    id: Number(id), author: "murat",
+    translation: "оперативдик эстутум түзмөгү",
+    comments: [
+      {id: 1, author: 'user1', text: 'lorem ipsum dolor'},
+      {id: 2, author: 'user2', text: 'ipsum dolor amet'},
+    ]
+  })
+  try {
+    let result = yield call(someGetRequest, id)
+    yield put(actions.getSuggestionSuccess({
+      data: result
+    }))
+  } catch (error) {
+    yield put(actions.getSuggestionError(error))
+  }
+}
+
+export function* getSuggestionRequestWatcher() {
+  yield takeEvery(actions.GET_SUGGESTION_REQUEST, getSuggestionRequestWorker)
+}
