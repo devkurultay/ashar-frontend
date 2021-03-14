@@ -1,0 +1,38 @@
+.terms-translation-suggestion {
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  grid-column-gap: 18px;
+  align-items: center;
+  border: 2px solid #D1D1D6;
+  border-radius: 4px;
+  margin-top: 24px; }
+  .terms-translation-suggestion__content {
+    display: flex;
+    flex-direction: column; }
+    .terms-translation-suggestion__content__translation {
+      font-size: 14px;
+      line-height: 16px; }
+    .terms-translation-suggestion__content__author {
+      font-size: 12px;
+      line-height: 16px; }
+      .terms-translation-suggestion__content__author span {
+        color: #8540F5; }
+  .terms-translation-suggestion__icons {
+    border-left: 2px solid #D1D1D6;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 18px;
+    align-items: center;
+    padding-left: 20px; }
+    .terms-translation-suggestion__icons__comment {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .terms-translation-suggestion__icons__comment span {
+        margin-top: 6px; }
+    .terms-translation-suggestion__icons__like {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .terms-translation-suggestion__icons__like span {
+        margin-top: 6px; }

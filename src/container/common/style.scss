@@ -1,0 +1,51 @@
+
+
+.terms-translation-suggestion {
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  grid-column-gap: 18px;
+  align-items: center;
+  border: 2px solid #D1D1D6;
+  border-radius: 4px;
+  margin-top: 24px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    &__translation {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    &__author {
+      font-size: 12px;
+      line-height: 16px;
+      span {
+        color: #8540F5;
+      }
+    }
+  }
+  &__icons {
+    border-left: 2px solid #D1D1D6;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 18px;
+    align-items: center;
+    padding-left: 20px;
+    &__comment {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      span {
+        margin-top: 6px;
+      }
+    }
+    &__like {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      span {
+        margin-top: 6px;
+      }
+    }
+  }
+
+}

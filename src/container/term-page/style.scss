@@ -1,0 +1,52 @@
+@import "../../styles/style-utilities";
+
+.term-details {
+  &__title {
+    font-size: 24px;
+    line-height: 28px;
+    color: $black-color;
+    font-weight: normal;
+    text-align: center;
+  }
+  &__inner {
+    .terms-other-lang-example {
+      padding: 0 75px;
+      &__lang {
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+    .request-list__title {
+      border-bottom: 0;
+    }
+    p {
+      font-size: 14px;
+      line-height: 16px;
+      color: #C7C7CC;
+    }
+  }
+}
+
+@media (min-width: $break-small) {
+  .term-details {
+    &__inner {
+      max-width: 360px;
+    }
+  }
+}
+
+@media (min-width: $break-medium) {
+  .term-details {
+    &__inner {
+      max-width: 600px;
+    }
+  }
+}
+
+@media (min-width: $break-large) {
+  .term-details {
+    &__inner {
+      max-width: 720px;
+    }
+  }
+}

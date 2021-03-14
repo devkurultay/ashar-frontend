@@ -1,0 +1,27 @@
+.term-details__title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  font-weight: normal;
+  text-align: center; }
+.term-details__inner .terms-other-lang-example {
+  padding: 0 75px; }
+  .term-details__inner .terms-other-lang-example__lang {
+    font-size: 16px;
+    line-height: 19px; }
+.term-details__inner .request-list__title {
+  border-bottom: 0; }
+.term-details__inner p {
+  font-size: 14px;
+  line-height: 16px;
+  color: #C7C7CC; }
+
+@media (min-width: 600px) {
+  .term-details__inner {
+    max-width: 360px; } }
+@media (min-width: 960px) {
+  .term-details__inner {
+    max-width: 600px; } }
+@media (min-width: 1280px) {
+  .term-details__inner {
+    max-width: 720px; } }
