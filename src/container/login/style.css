@@ -1,0 +1,28 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px; }
+  .login__inner {
+    box-sizing: border-box; }
+    .login__inner__logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    .login__inner__forgot-password {
+      margin-top: 40px;
+      color: #518EF8; }
+    .login__inner__form {
+      margin-top: 50px; }
+      .login__inner__form .form-input-wrapper .form-input__input {
+        background: #F2F2F7;
+        border-radius: 4px; }
+  @media (min-width: 600px) {
+    .login .login__inner {
+      max-width: 360px; } }
+  @media (min-width: 960px) {
+    .login .login__inner {
+      max-width: 600px; } }
+  @media (min-width: 1280px) {
+    .login .login__inner {
+      max-width: 720px; } }
