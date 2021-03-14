@@ -4,11 +4,9 @@
   color: #000000;
   font-weight: normal;
   text-align: center; }
-.term-details__inner .terms-other-lang-example {
-  padding: 0 75px; }
-  .term-details__inner .terms-other-lang-example__lang {
-    font-size: 16px;
-    line-height: 19px; }
+.term-details__inner .terms-other-lang-example__lang {
+  font-size: 16px;
+  line-height: 19px; }
 .term-details__inner .request-list__title {
   border-bottom: 0; }
 .term-details__inner p {
