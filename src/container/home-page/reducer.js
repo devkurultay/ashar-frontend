@@ -65,9 +65,16 @@ const homeReducer = (state = initialState, action) => {
         addSuggestionStatus: DATA_STATUS.REQUESTED
       }
     case homeActions.ADD_SUGGESTION_SUCCESS:
+      const { term_id } = action.data
+      let term = state.requests.filter(r => r.id === term_id)?.[0] || {}
+      const suggestions = [...term?.translation_suggestions, action.data]
+      term = { ...term, translation_suggestions: suggestions }
+      const requests = [...state.requests, term]
+      console.log('requests', requests)
       return {
         ...state,
         translationSuggestions: [...state.translationSuggestions, action.data],
+        requests: requests,
         addSuggestionStatus: DATA_STATUS.SUCCESS
       }
     case homeActions.ADD_SUGGESTION_ERROR:
