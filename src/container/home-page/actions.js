@@ -6,6 +6,10 @@ export const ADD_TERM_REQUEST = '[ADD-TERM] ADD TERM REQUEST'
 export const ADD_TERM_SUCCESS = '[ADD-TERM] ADD TERM SUCCESS'
 export const ADD_TERM_ERROR = '[ADD-TERM] ADD TERM ERROR'
 
+export const ADD_SUGGESTION_REQUEST = '[ADD-SUGGESTION] ADD SUGGESTION REQUEST'
+export const ADD_SUGGESTION_SUCCESS = '[ADD-SUGGESTION] ADD SUGGESTION SUCCESS'
+export const ADD_SUGGESTION_ERROR = '[ADD-SUGGESTION] ADD SUGGESTION ERROR'
+
 export const GET_TERM_REQUEST = '[GET-TERM] GET TERM REQUEST'
 export const GET_TERM_SUCCESS = '[GET-TERM] GET TERM SUCCESS'
 export const GET_TERM_ERROR = '[GET-TERM] GET TERM ERROR'
@@ -21,6 +25,10 @@ export const requestsError = (error) => ({ type: REQUESTS_ERROR, error })
 export const addTermRequest = (formData) => ({ type: ADD_TERM_REQUEST, ...formData })
 export const addTermSuccess = ({ data }) => ({ type: ADD_TERM_SUCCESS, data })
 export const addTermError = (error) => ({ type: ADD_TERM_ERROR, error })
+
+export const addSuggestionRequest = (formData) => ({ type: ADD_SUGGESTION_REQUEST, ...formData })
+export const addSuggestionSuccess = ({ data }) => ({ type: ADD_SUGGESTION_SUCCESS, data })
+export const addSuggestionError = (error) => ({ type: ADD_SUGGESTION_ERROR, error })
 
 export const getTermRequest = (id) => ({ type: GET_TERM_REQUEST, id })
 export const getTermSuccess = ({ data }) => ({ type: GET_TERM_SUCCESS, data })

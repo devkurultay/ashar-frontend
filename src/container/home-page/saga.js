@@ -86,18 +86,28 @@ export function* addTermRequestWatcher() {
   yield takeEvery(actions.ADD_TERM_REQUEST, addTermRequestWorker)
 }
 
-function* getTermRequestWorker({ id }) {
-  const someGetRequest = (id) => ({
-    id: Number(id),
-    term: "CPU",
-    description: "Бул компьтердин негизги эсептөөчү бирдигинин аталышы.",
-    other_lang_examples: [
-        {"lang": "ru", "value": "ЦПУ"},
-        {"lang": "tr", "value": "İşlemci"},
-        {"lang": "kk", "value": "Орталық Есептеуіш Бөлім"}]
-  })
+function* addSuggestionRequestWorker({ suggested_translation, term_id }) {
+  const data = {
+    suggested_translation,
+    term_id
+  }
   try {
-    let result = yield call(someGetRequest, id)
+    let result = yield call(homePageApi.addNewSuggestion, data)
+    yield put(actions.addSuggestionSuccess({
+      data: result
+    }))
+  } catch (error) {
+    yield put(actions.addSuggestionError(error))
+  }
+}
+
+export function* addSuggestionRequestWatcher() {
+  yield takeEvery(actions.ADD_SUGGESTION_REQUEST, addSuggestionRequestWorker)
+}
+
+function* getTermRequestWorker({ id }) {
+  try {
+    let result = yield call(homePageApi.getTerm, id)
     yield put(actions.getTermSuccess({
       data: result
     }))
