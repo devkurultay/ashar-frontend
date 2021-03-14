@@ -3,13 +3,15 @@
   .home-page__btn {
     margin-top: 100px; }
 
-.request-list__title {
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 23px;
-  color: #000000;
-  border-bottom: 2px solid #E0CFFC;
-  padding-bottom: 10px; }
+.request-list {
+  padding: 0 6px; }
+  .request-list__title {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+    border-bottom: 2px solid #E0CFFC;
+    padding-bottom: 10px; }
 
 .request-item {
   display: grid;
@@ -22,23 +24,23 @@
   margin-top: 24px; }
   .request-item__content {
     display: grid;
-    grid-template-columns: 85px 1fr;
-    grid-column-gap: 18px;
+    grid-template-columns: 130px 1fr;
+    grid-column-gap: 15px;
     align-items: center;
     justify-items: center;
     width: 100%; }
     .request-item__content p {
-      font-size: 18px;
+      font-size: 12px;
       line-height: 21px;
       color: #000000;
       text-transform: uppercase;
       border-right: 2px solid #D1D1D6;
       height: 30px;
-      padding: 10px 20px 0 10px; }
+      padding: 10px 10px 0 5px; }
   .request-item img {
     border-left: 2px solid #D1D1D6;
     height: 40px;
-    padding-left: 13px; }
+    padding-left: 10px; }
 
 .terms-other-lang-example__lang {
   font-size: 12px;

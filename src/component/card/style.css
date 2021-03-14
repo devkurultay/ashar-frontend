@@ -40,7 +40,7 @@
       padding: 0 24px; } }
   @media (max-width: 767px) {
     .card-content {
-      padding: 0 15px; } }
+      padding: 0 12px; } }
   .card-content.half-width {
     width: 50%; }
   .card-content.no-background {
