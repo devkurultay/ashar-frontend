@@ -4,7 +4,7 @@ import TranslationSuggestion from '../common/translation-suggestion'
 import Card from '../../component/card/card'
 import CardContent from '../../component/card/card-content'
 
-import './style.css'
+import './style.scss'
 import AddSuggestionBtn from './add-suggestion-btn'
 
 const TermDetails = (props) => {

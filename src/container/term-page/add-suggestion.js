@@ -11,7 +11,7 @@ import FormInput from '../../component/form-input/form-input'
 import Button from '../../component/button/button'
 import * as Yup from 'yup'
 
-import '../home-page/style.css'
+import '../home-page/style.scss'
 
 const formValidation = Yup.object().shape(
   {
@@ -32,7 +32,7 @@ const AddSuggestion = () => {
     if (isRequestedStatus(prevAddSuggestionStatus) && isSuccessStatus(addSuggestionStatus)) {
       history.push('/term/' + term_id)
     }
-  }, [prevAddSuggestionStatus, addSuggestionStatus, history, term_id])
+  }, [prevAddSuggestionStatus, addSuggestionStatus, history, term_id, dispatch])
 
   const termObj = requests.length ? requests.filter(r => r.id === Number(term_id))?.[0] : {}
   const title = termObj?.term?.length ? `"${termObj.term}" боюнча жаңы котормо` : 'Жаңы котормо'

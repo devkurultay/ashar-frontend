@@ -2,50 +2,6 @@ import { call, put, takeEvery } from 'redux-saga/effects'
 import { homePageApi } from '../../api/home-page-api'
 import * as actions from './actions'
 
-const fixture = () => [
-  {
-    "id": 1,
-    "term": "CPU",
-    "description": "Бул компьтердин негизги эсептөөчү бирдигинин аталышы.",
-    "other_lang_examples": [
-        {"lang": "ru", "value": "ЦПУ"},
-        {"lang": "tr", "value": "İşlemci"},
-        {"lang": "kk", "value": "Орталық Есептеуіш Бөлім"}],
-    "translation_suggestions": [
-      {"id": 1, "author": "murat", "translation": "борбордук эсептөөчү бөлүк"},
-      {"id": 2, "author": "elza", "translation": "борбордук эсептөөчү бирдик"}]
-  },
-  {
-    "id": 2,
-    "term": "RAM",
-    "description": "Бул компьтердин CPU'су менен тыгыз иштешкен эс тутум бөлүгү.",
-    "other_lang_examples": [
-        {"lang": "ru", "value": "ОЗУ"},
-        {"lang": "tr", "value": "Veri deposu"},
-        {"lang": "kk", "value": "Жедел Жадтау Құрылғысы"}],
-    "translation_suggestions": [
-      {"id": 1, "author": "murat", "translation": "оперативдик эстутум түзмөгү"},
-      {"id": 2, "author": "elza", "translation": "ыкчам эстутум түзмөгү"}]
-  },
-  {
-    "id": 3,
-    "term": "Lorem",
-    "description": "Some data .",
-    "other_lang_examples": [
-        {"lang": "ru", "value": "ЦПУ"},
-        {"lang": "tr", "value": "İşlemci"}],
-    "translation_suggestions": []
-  },
-  {
-    "id": 4,
-    "term": "Ipsum",
-    "description": "Some other descr.",
-    "other_lang_examples": [
-        {"lang": "ru", "value": "ОЗУ"}],
-    "translation_suggestions": []
-  },
-]
-
 function* requestsRequestWorker() {
   try {
     let result = yield call(homePageApi.terms)
@@ -93,8 +49,11 @@ function* addSuggestionRequestWorker({ suggested_translation, term_id }) {
   }
   try {
     let result = yield call(homePageApi.addNewSuggestion, data)
+    const toStore = {
+      ...result.data, author: "eldosbolgombaev@gmail.com"
+    }
     yield put(actions.addSuggestionSuccess({
-      data: result
+      data: toStore
     }))
   } catch (error) {
     yield put(actions.addSuggestionError(error))

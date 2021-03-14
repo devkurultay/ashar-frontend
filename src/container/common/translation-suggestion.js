@@ -2,7 +2,7 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import CardContent from '../../component/card/card-content'
 
-import './style.css'
+import './style.scss'
 
 const TranslationSuggestion = (props) => {
   const history = useHistory()

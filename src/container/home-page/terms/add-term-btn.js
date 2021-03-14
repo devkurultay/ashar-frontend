@@ -2,7 +2,7 @@ import React from 'react'
 import { useHistory } from "react-router-dom"
 import Button from '../../../component/button/button'
 
-import '../style.css'
+import '../style.scss'
 
 const AddTermBtn = () => {
   const history = useHistory()

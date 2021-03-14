@@ -3,10 +3,9 @@ import { useHistory } from "react-router-dom"
 import OtherLangExample from '../../common/other-lang-example'
 import CardContent from '../../../component/card/card-content'
 
-import '../style.css'
+import '../style.scss'
 
 const RequestItem = (props) => {
-  console.log(props)
   const history = useHistory()
   const examples = props?.other_language_examples || []
   return (
