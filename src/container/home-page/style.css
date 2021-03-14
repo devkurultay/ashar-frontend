@@ -13,21 +13,28 @@
 
 .request-item {
   display: grid;
-  grid-template-columns: 85px 1fr 75px;
+  grid-template-columns: 1fr 75px;
   grid-column-gap: 18px;
   align-items: center;
   justify-items: center;
   border: 2px solid #D1D1D6;
   border-radius: 4px;
   margin-top: 24px; }
-  .request-item p {
-    font-size: 18px;
-    line-height: 21px;
-    color: #000000;
-    text-transform: uppercase;
-    border-right: 2px solid #D1D1D6;
-    height: 30px;
-    padding: 10px 20px 0 10px; }
+  .request-item__content {
+    display: grid;
+    grid-template-columns: 85px 1fr;
+    grid-column-gap: 18px;
+    align-items: center;
+    justify-items: center;
+    width: 100%; }
+    .request-item__content p {
+      font-size: 18px;
+      line-height: 21px;
+      color: #000000;
+      text-transform: uppercase;
+      border-right: 2px solid #D1D1D6;
+      height: 30px;
+      padding: 10px 20px 0 10px; }
   .request-item img {
     border-left: 2px solid #D1D1D6;
     height: 40px;
