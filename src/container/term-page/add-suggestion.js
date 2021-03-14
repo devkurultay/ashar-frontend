@@ -36,7 +36,6 @@ const AddSuggestion = () => {
 
   const termObj = requests.length ? requests.filter(r => r.id === Number(term_id))?.[0] : {}
   const title = termObj?.term?.length ? `"${termObj.term}" боюнча жаңы котормо` : 'Жаңы котормо'
-  console.log(title, termObj)
   return (
     <Card className="add-term">
       <CardContent className="add-term__inner">
