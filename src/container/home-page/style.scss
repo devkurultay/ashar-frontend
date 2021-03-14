@@ -51,9 +51,43 @@
   }
 }
 
+.add-term {
+  margin-top: 30px;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    .form-input-wrapper {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      grid-column-gap: 21px;
+      align-items: center;
+    }
+    p {
+      font-size: 18px;
+      line-height: 21px;
+      color: #000000;
+      margin: 24px 0;
+    }
+    &__textarea {
+      .form-input-wrapper {
+        .form-input {
+          &__input {
+            background: $white-color;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: $break-small) {
   .request-list {
     max-width: 360px;
+  }
+  .add-term {
+    &__inner {
+      max-width: 360px;
+    }
   }
 }
 
@@ -61,10 +95,21 @@
   .request-list {
     max-width: 600px;
   }
+
+  .add-term {
+    &__inner {
+      max-width: 600px;
+    }
+  }
 }
 
 @media (min-width: $break-large) {
   .request-list {
     max-width: 720px;
+  }
+  .add-term {
+    &__inner {
+      max-width: 720px;
+    }
   }
 }

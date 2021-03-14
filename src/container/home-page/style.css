@@ -38,12 +38,39 @@
   line-height: 14px;
   color: #8540F5; }
 
+.add-term {
+  margin-top: 30px; }
+  .add-term__form {
+    display: flex;
+    flex-direction: column; }
+    .add-term__form .form-input-wrapper {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      grid-column-gap: 21px;
+      align-items: center; }
+    .add-term__form p {
+      font-size: 18px;
+      line-height: 21px;
+      color: #000000;
+      margin: 24px 0; }
+    .add-term__form__textarea .form-input-wrapper .form-input__input {
+      background: #ffffff; }
+
 @media (min-width: 600px) {
   .request-list {
+    max-width: 360px; }
+
+  .add-term__inner {
     max-width: 360px; } }
 @media (min-width: 960px) {
   .request-list {
+    max-width: 600px; }
+
+  .add-term__inner {
     max-width: 600px; } }
 @media (min-width: 1280px) {
   .request-list {
+    max-width: 720px; }
+
+  .add-term__inner {
     max-width: 720px; } }
