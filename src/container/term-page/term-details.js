@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import OtherLangExample from '../common/other-lang-example'
 import TranslationSuggestion from '../common/translation-suggestion'
 
