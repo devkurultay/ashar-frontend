@@ -1,4 +1,5 @@
 import { call, put, takeEvery } from 'redux-saga/effects'
+import { homePageApi } from '../../api/home-page-api'
 import * as actions from './actions'
 
 const fixture = () => [
@@ -47,7 +48,7 @@ const fixture = () => [
 
 function* requestsRequestWorker() {
   try {
-    let result = yield call(fixture)
+    let result = yield call(homePageApi.terms)
     yield put(actions.requestsSuccess({
       data: result
     }))
@@ -64,16 +65,15 @@ function* addTermRequestWorker({ term, description, ru, tr, en }) {
   const data = {
     term: term,
     description: description,
+    category: 'aviaica',
     other_lang_examples: [
-      {lang: "ru", value: ru},
-      {lang: "tr", value: tr},
-      {lang: "en", value: en}
+      {language: "ru", translation: ru},
+      {language: "tr", translation: tr},
+      {language: "en", translation: en}
     ]
   }
-  // TODO: remove this
-  const somePostRequest = d => d
   try {
-    let result = yield call(somePostRequest, data)
+    let result = yield call(homePageApi.addNewTerm, data)
     yield put(actions.addTermSuccess({
       data: result
     }))

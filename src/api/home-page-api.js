@@ -1,12 +1,12 @@
 import instance from './axios-api'
 
 export const homePageApi = {
-  getHomePage: async () => {
-    const data = await instance.get('/home')
+  terms: async () => {
+    const data = await instance.get('/terms')
     return data.data
   },
 
-  postHomePage: async (data) => {
-   await instance.post('/home', data)
+  addNewTerm: async (data) => {
+   await instance.post('/terms', data)
   }
 }
