@@ -15,14 +15,13 @@ import '../style.css'
 
 const formValidation = Yup.object().shape(
   {
-    term: Yup.string,
-    description: Yup,
+    term: Yup.string(),
+    description: Yup.string(),
     ru: Yup.string(),
     tr: Yup.string(),
     en: Yup.string()
   }
 )
-
 
 const AddTerm = () => {
   const dispatch = useDispatch()
